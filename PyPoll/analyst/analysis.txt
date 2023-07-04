@@ -1,2 +1,7 @@
-Election Results-------------------------total votes:{total_votes}
----------------------------f{candidate}: {percentage:.3f}% ({votes})Winner: {winner}--------------------------
+Election Results
+-------------------------
+total votes:369711
+---------------------------
+Raymon Anthony Doane: 3.139% (11606)
+Winner: Diana DeGette
+--------------------------
