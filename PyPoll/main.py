@@ -52,12 +52,28 @@ print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {total_votes}")
 print("-------------------------")
-for candidate, votes in vote_count.items():
-    percentage = percentage_votes[candidate]
-    print(f"{candidate}: {percentage:.3f}% ({votes})")
 print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
+
+# Specify the file path for saving the analysis results
+output_file = "/Users/titi/Desktop/Python-Challenge/PyPoll/analysis.txt"
+
+# Open the file in write mode
+with open(output_file, "w") as file:
+
+    # Write the results to the file
+    file.write ("Election Results")
+    file.write ("-------------------------")
+    file.write ("total votes:{total_votes}\n")
+    file.write ("---------------------------")
+    file.write ("f{candidate}: {percentage:.3f}% ({votes})")
+    file.write ("Winner: {winner}")
+    file.write ("--------------------------")
+
+# Print a message indicating the file was saved successfully
+print("Results saved to analysis.txt file.")
+
 
 
 

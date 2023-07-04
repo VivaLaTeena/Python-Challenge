@@ -1,0 +1,2 @@
+Election Results-------------------------total votes:{total_votes}
+---------------------------f{candidate}: {percentage:.3f}% ({votes})Winner: {winner}--------------------------
