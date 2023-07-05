@@ -51,6 +51,9 @@ for candidate, votes in vote_count.items():
 print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {total_votes}")
+for candidate, votes in vote_count.items():
+    percentage = percentage_votes[candidate]
+    print(f"{candidate}: {percentage:.3f}% ({votes})")
 print("-------------------------")
 print(f"{candidate}: {percentage:.3f}% ({votes})\n")
 print("-------------------------")
@@ -67,10 +70,12 @@ with open(output_file, "w") as file:
     file.write ("Election Results\n")
     file.write ("-------------------------\n")
     file.write (f"total votes:{total_votes}\n")
-    file.write ("---------------------------\n")
-    file.write (f"{candidate}: {percentage:.3f}% ({votes})\n")
-    file.write (f"Winner: {winner}\n")
-    file.write ("--------------------------\n")
+    for candidate, votes in vote_count.items():
+        percentage = percentage_votes[candidate]
+        file.write(f"{candidate}: {percentage:.3f}% ({votes})\n")
+    file.write("-------------------------\n")
+    file.write(f"Winner: {winner}\n")
+    file.write("-------------------------\n")
 
 # Print a message indicating the file was saved successfully
 print("Results saved to analysis.txt file.")
